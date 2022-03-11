@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: false, defaultViewport: null});
     const page = await browser.newPage();
     await page.goto('https://www.linkedin.com/login/es?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin');
 
@@ -22,6 +22,29 @@ const puppeteer = require('puppeteer');
     btn.click()
 
     await page.waitForTimeout(2000)
-    page.goto('https://www.linkedin.com/jobs/')
+    await page.goto('https://www.linkedin.com/jobs/')
   
+    const inputs_search = [
+        {
+            tecnology: 'python',
+            countrie: 'Colombia'
+        }
+    ]
+
+    for(let i = 0; i < inputs_search.length; i++) {
+
+        await page.waitForTimeout(1500)
+        
+        const tecnology = inputs_search[i].tecnology 
+        const countrie = inputs_search[i].countrie 
+        
+        await page.type('#jobs-search-box-keyword-id-ember31', tecnology)
+        await page.type('#jobs-search-box-location-id-ember31', countrie)
+        await page.click('.jobs-search-box__submit-button')
+
+        //await page.goto('https://www.linkedin.com/jobs/')
+
+
+    }
+
 })();
