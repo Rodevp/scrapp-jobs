@@ -42,6 +42,20 @@ const puppeteer = require('puppeteer');
         await page.type('#jobs-search-box-location-id-ember31', countrie)
         await page.click('.jobs-search-box__submit-button')
 
+        await page.waitForTimeout(2000)
+        const resultTecnology = await page.evaluate( () => {
+
+            const mapText = Array.from( document.querySelectorAll('.jobs-search-results-list__text') )
+                                 .map( e => e.textContent.replace(/ /g, '').split('\n').join('') )
+
+            const textResultsOfTecnology = mapText[1].split('resultados').join('')
+            
+            return textResultsOfTecnology
+
+        })
+
+        console.log(resultTecnology)
+
         //await page.goto('https://www.linkedin.com/jobs/')
 
 
