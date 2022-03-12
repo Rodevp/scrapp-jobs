@@ -39,6 +39,8 @@ const { chromium } = require('playwright');
         }
     ]
 
+    const resultOfTecnologys = []
+
     await page.waitForTimeout(2000)
 
     for (let i = 0; i < inputs_search.length; i++) {
@@ -72,20 +74,9 @@ const { chromium } = require('playwright');
             return objData
         })
 
-        console.log(resultTecnology)
+        resultOfTecnologys.push(resultTecnology)
 
     }
 
-    /**
-     * 
-     * 
- 
- 
-         console.log(resultTecnology) */
-
-    //await page.waitForTimeout(2000)
-    //await page.goto('https://www.linkedin.com/jobs/')
-
-    //}
 
 })();
