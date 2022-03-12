@@ -20,6 +20,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'python',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Javascript',
         countrie: 'Argentina'
     },
@@ -38,6 +42,10 @@ const arrData = [
     {
         tecnology: 'Javascript',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Javascript',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'Ruby',
@@ -60,6 +68,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Ruby',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Java',
         countrie: 'Argentina'
     },
@@ -78,6 +90,10 @@ const arrData = [
     {
         tecnology: 'Java',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Java',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'Go',
@@ -100,6 +116,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Go',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Php',
         countrie: 'Argentina'
     },
@@ -118,6 +138,34 @@ const arrData = [
     {
         tecnology: 'Php',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Php',
+        countrie: 'Mexico'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Argentina'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Colombia'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Chile'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Ecuador'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Peru'
+    },
+    {
+        tecnology: 'C#',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'React js',
@@ -140,6 +188,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'React js',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Angular',
         countrie: 'Argentina'
     },
@@ -158,6 +210,10 @@ const arrData = [
     {
         tecnology: 'Angular',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Angular',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'Vue js',
@@ -180,6 +236,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Vue js',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Django',
         countrie: 'Argentina'
     },
@@ -198,6 +258,10 @@ const arrData = [
     {
         tecnology: 'Django',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Django',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'Flask',
@@ -220,6 +284,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Flask',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Laravel',
         countrie: 'Argentina'
     },
@@ -238,6 +306,10 @@ const arrData = [
     {
         tecnology: 'Laravel',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Laravel',
+        countrie: 'Mexico'
     },
     {
         tecnology: 'Express js',
@@ -260,6 +332,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Express js',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Node js',
         countrie: 'Argentina'
     },
@@ -280,6 +356,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Node js',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Next js',
         countrie: 'Argentina'
     },
@@ -300,6 +380,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Next js',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Ruby on rails',
         countrie: 'Argentina'
     },
@@ -320,6 +404,10 @@ const arrData = [
         countrie: 'Peru'
     },
     {
+        tecnology: 'Ruby on rails',
+        countrie: 'Mexico'
+    },
+    {
         tecnology: 'Spring Boot',
         countrie: 'Argentina'
     },
@@ -338,6 +426,34 @@ const arrData = [
     {
         tecnology: 'Spring Boot',
         countrie: 'Peru'
+    },
+    {
+        tecnology: 'Spring Boot',
+        countrie: 'Mexico'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Argentina'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Colombia'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Chile'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Ecuador'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Peru'
+    },
+    {
+        tecnology: 'ASP.NET MVC',
+        countrie: 'Mexico'
     },
 ]
 
