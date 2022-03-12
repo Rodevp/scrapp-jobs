@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/Rodevp/scrapp-jobs#readme",
   "dependencies": {
-    "playwright": "1.19.2",
-    "puppeteer": "13.5.1"
+    "playwright": "1.19.2"
   },
   "devDependencies": {
     "nodemon": "2.0.15"
