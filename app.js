@@ -1,8 +1,8 @@
-const {chromium} = require('playwright');
+const { chromium } = require('playwright');
 
 (async () => {
 
-    const browser = await chromium.launch( { headless: false } )
+    const browser = await chromium.launch({ headless: false })
     const page = await browser.newPage()
 
     await page.goto('https://www.linkedin.com/login/es?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin')
@@ -13,31 +13,9 @@ const {chromium} = require('playwright');
     await page.fill('input[id="password"]', 'roxd**17')
     await page.click('button[aria-label="Iniciar sesión"]')
 
-   /**
-    * 
-    *  const browser = await puppeteer.launch({headless: false, defaultViewport: null});
-    const page = await browser.newPage();
-    await page.goto('https://www.linkedin.com/login/es?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin');
-
-    await page.waitForTimeout(2000)
-    await page.evaluateHandle(() => {
-        const input = document.getElementById('username')
-        const inputPass = document.getElementById('password')
-
-
-        input.value = 'rodriguezrodrigor12@gmail.com'
-        inputPass.value = 'roxd**17'
-
-    })
-
-    const btn = await page.evaluateHandle(() => 
-        document.querySelector('.btn__primary--large')
-    )
-    btn.click()
-
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(1500)
     await page.goto('https://www.linkedin.com/jobs/')
-  
+
     const inputs_search = [
         {
             tecnology: 'python',
@@ -58,40 +36,59 @@ const {chromium} = require('playwright');
         {
             tecnology: 'python',
             countrie: 'Peru'
-        }        
+        }
     ]
 
-    for(let i = 0; i < inputs_search.length; i++) {
+    await page.waitForTimeout(2000)
 
-        const tecnology = inputs_search[i].tecnology 
-        const countrie = inputs_search[i].countrie 
-        
-        await page.waitForTimeout(5000)
-        const inputs = await page.evaluate(() => document.querySelectorAll('.jobs-search-box__text-input'))
-        console.log(inputs[0], inputs[3])
+    for (let i = 0; i < inputs_search.length; i++) {
 
-        //await page.click('.jobs-search-box__submit-button')
-        /**
+        const tecnology = inputs_search[i].tecnology
+        const countrie = inputs_search[i].countrie
 
         await page.waitForTimeout(2000)
-        const resultTecnology = await page.evaluate( () => {
 
-            const mapText = Array.from( document.querySelectorAll('.jobs-search-results-list__text') )
-                                 .map( e => e.textContent.replace(/ /g, '').split('\n').join('') )
+        await page.locator('//*/div[6]/header/div/div/div/div[2]/div[1]/div/div/input[1]').fill(tecnology)
+        await page.locator('//*/div[6]/header/div/div/div/div[2]/div[2]/div/div/input[1]').fill(countrie)
+        await page.locator('//*/div[6]/header/div/div/div/div[2]/button[1]').click()
 
-            const textResultsOfTecnology = mapText[1].split('resultados').join('')
-            const tecnology = mapText[0]
 
-            console.log(tecnology)
-            
-            return textResultsOfTecnology
+    }
 
-        })
+    /**
+     * 
+     * 
+ 
+     for(let i = 0; i < inputs_search.length; i++) {
+ 
+          
+         
+         await page.waitForTimeout(5000)
+         const inputs = await page.evaluate(() => document.querySelectorAll('.jobs-search-box__text-input'))
+         console.log(inputs[0], inputs[3])
+ 
+         //await page.click('.jobs-search-box__submit-button')
+         /**
+ 
+         await page.waitForTimeout(2000)
+         const resultTecnology = await page.evaluate( () => {
+ 
+             const mapText = Array.from( document.querySelectorAll('.jobs-search-results-list__text') )
+                                  .map( e => e.textContent.replace(/ /g, '').split('\n').join('') )
+ 
+             const textResultsOfTecnology = mapText[1].split('resultados').join('')
+             const tecnology = mapText[0]
+ 
+             console.log(tecnology)
+             
+             return textResultsOfTecnology
+ 
+         })
+ 
+         console.log(resultTecnology) */
 
-        console.log(resultTecnology) */
-
-        //await page.waitForTimeout(2000)
-        //await page.goto('https://www.linkedin.com/jobs/')
+    //await page.waitForTimeout(2000)
+    //await page.goto('https://www.linkedin.com/jobs/')
 
     //}
 
