@@ -52,6 +52,27 @@ const { chromium } = require('playwright');
         await page.locator('//*/div[6]/header/div/div/div/div[2]/div[2]/div/div/input[1]').fill(countrie)
         await page.locator('//*/div[6]/header/div/div/div/div[2]/button[1]').click()
 
+        await page.waitForTimeout(1500)
+        const resultTecnology = await page.evaluate(() => {
+            const mapText = Array.from(document.querySelectorAll('.jobs-search-results-list__text'))
+                                 .map(e => e.textContent.replace(/ /g, '').split('\n').join(''))
+            
+
+            const textResultsOfTecnology = mapText[1].split('resultados').join('')
+            const tecnology = mapText[0].split('en')[0]
+            const location = mapText[0].split('en')[1]
+            console.log(textResultsOfTecnology, tecnology, location)
+            
+            const objData = {
+                reuslt: textResultsOfTecnology,
+                tecnology,
+                location: location === 'Arg' ? 'Argentina': location
+            }
+
+            return objData
+        })
+
+        console.log(resultTecnology)
 
     }
 
@@ -59,31 +80,6 @@ const { chromium } = require('playwright');
      * 
      * 
  
-     for(let i = 0; i < inputs_search.length; i++) {
- 
-          
-         
-         await page.waitForTimeout(5000)
-         const inputs = await page.evaluate(() => document.querySelectorAll('.jobs-search-box__text-input'))
-         console.log(inputs[0], inputs[3])
- 
-         //await page.click('.jobs-search-box__submit-button')
-         /**
- 
-         await page.waitForTimeout(2000)
-         const resultTecnology = await page.evaluate( () => {
- 
-             const mapText = Array.from( document.querySelectorAll('.jobs-search-results-list__text') )
-                                  .map( e => e.textContent.replace(/ /g, '').split('\n').join('') )
- 
-             const textResultsOfTecnology = mapText[1].split('resultados').join('')
-             const tecnology = mapText[0]
- 
-             console.log(tecnology)
-             
-             return textResultsOfTecnology
- 
-         })
  
          console.log(resultTecnology) */
 
