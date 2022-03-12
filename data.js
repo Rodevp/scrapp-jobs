@@ -360,30 +360,6 @@ const arrData = [
         countrie: 'Mexico'
     },
     {
-        tecnology: 'Next js',
-        countrie: 'Argentina'
-    },
-    {
-        tecnology: 'Next js',
-        countrie: 'Colombia'
-    },
-    {
-        tecnology: 'Next js',
-        countrie: 'Chile'
-    },
-    {
-        tecnology: 'Next js',
-        countrie: 'Ecuador'
-    },
-    {
-        tecnology: 'Next js',
-        countrie: 'Peru'
-    },
-    {
-        tecnology: 'Next js',
-        countrie: 'Mexico'
-    },
-    {
         tecnology: 'Ruby on rails',
         countrie: 'Argentina'
     },

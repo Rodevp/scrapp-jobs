@@ -10,8 +10,8 @@ import { chromium } from 'playwright'
 
     await page.waitForTimeout(1000)
 
-    await page.fill('input[id="username"]', 'rodriguezrodrigor12@gmail.com')
-    await page.fill('input[id="password"]', 'roxd**17')
+    await page.fill('input[id="username"]', 'rodriguezrodrigo17@hotmail.com')
+    await page.fill('input[id="password"]', 'Roxd**17')
     await page.click('button[aria-label="Iniciar sesión"]')
 
     await page.waitForTimeout(1500)
