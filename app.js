@@ -1,4 +1,5 @@
-const { chromium } = require('playwright');
+import inputs_search from './data.js'
+import { chromium } from 'playwright'
 
 (async () => {
 
@@ -16,28 +17,7 @@ const { chromium } = require('playwright');
     await page.waitForTimeout(1500)
     await page.goto('https://www.linkedin.com/jobs/')
 
-    const inputs_search = [
-        {
-            tecnology: 'python',
-            countrie: 'Argentina'
-        },
-        {
-            tecnology: 'python',
-            countrie: 'Colombia'
-        },
-        {
-            tecnology: 'python',
-            countrie: 'Chile'
-        },
-        {
-            tecnology: 'python',
-            countrie: 'Ecuador'
-        },
-        {
-            tecnology: 'python',
-            countrie: 'Peru'
-        }
-    ]
+  
 
     const resultOfTecnologys = []
 
@@ -78,5 +58,6 @@ const { chromium } = require('playwright');
 
     }
 
+    console.log(resultOfTecnologys)
 
 })();
