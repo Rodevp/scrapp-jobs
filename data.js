@@ -443,11 +443,11 @@ const arrCountries = [
         id: 2
     },
     {
-        name: 'Peru',
+        name: 'Perú',
         id: 3
     },
     {
-        name: 'Mexico',
+        name: 'México',
         id: 4
     },
     {
@@ -462,7 +462,7 @@ const arrCountries = [
 
 const arrTecnologys = [
     {
-        name: 'python',
+        name: 'Python',
         id: 1
     },
     {
@@ -473,6 +473,66 @@ const arrTecnologys = [
         name: 'Ruby',
         id: 3
     },
+    {
+        name: 'Java',
+        id: 4
+    },
+    {
+        name: 'Go',
+        id: 5
+    },
+    {
+        name: 'Php',
+        id: 6
+    },
+    {
+        name: 'C#',
+        id: 7
+    },
+    {
+        name: 'React js',
+        id: 8
+    },
+    {
+        name: 'Angular',
+        id: 9
+    },
+    {
+        name: 'Vue js',
+        id: 10
+    },
+    {
+        name: 'Django',
+        id: 11
+    },
+    {
+        name: 'Flask',
+        id: 12
+    },
+    {
+        name: 'Laravel',
+        id: 13
+    },
+    {
+        name: 'Express  js',
+        id: 14
+    },
+    {
+        name: 'Node js',
+        id: 15
+    },
+    {
+        name: 'Ruby on rails',
+        id: 16
+    },
+    {
+        name: 'Spring boot',
+        id: 17
+    },
+    {
+        name: 'ASP.NET MVC',
+        id: 18
+    }
 ]
 
 module.exports = {

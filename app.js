@@ -1,4 +1,4 @@
-const  { arrSearchReusults } = require('./data.js')
+const  { arrSearchReusults, arrCountries, arrTecnologys } = require('./data.js')
 const { chromium } = require('playwright')
 const { client } = require('./db.js')
 
@@ -18,10 +18,6 @@ const init = async () => {
     await page.waitForTimeout(1500)
     await page.goto('https://www.linkedin.com/jobs/')
 
-  
-
-    const resultOfTecnologys = []
-
     await page.waitForTimeout(2000)
 
     for (let i = 0; i < arrSearchReusults.length; i++) {
@@ -36,7 +32,9 @@ const init = async () => {
         await page.locator('//*/div[6]/header/div/div/div/div[2]/button[1]').click()
 
         await page.waitForTimeout(1500)
+        
         const resultTecnology = await page.evaluate(() => {
+
             const mapText = Array.from(document.querySelectorAll('.jobs-search-results-list__text'))
                                  .map(e => e.textContent.replace(/ /g, '').split('\n').join(''))
             
@@ -44,7 +42,6 @@ const init = async () => {
             const textResultsOfTecnology = mapText[1].split('resultados').join('')
             const tecnology = mapText[0].split('en')[0]
             const location = mapText[0].split('en')[1]
-            console.log(textResultsOfTecnology, tecnology, location)
             
             const objData = {
                 reuslt: textResultsOfTecnology,
@@ -55,7 +52,10 @@ const init = async () => {
             return objData
         })
 
-        resultOfTecnologys.push(resultTecnology)
+        const countrieResult = arrCountries.find(countrie => countrie.name.includes(resultTecnology.location))
+        const techResult = arrTecnologys.find(tech => tech.name === resultTecnology.tecnology )
+        console.log( resultTecnology.location, { countrieResult }, { techResult } )
+
 
     }
 
@@ -63,7 +63,7 @@ const init = async () => {
 
 }
 
-//init()
+init()
 
 /**
  * 
