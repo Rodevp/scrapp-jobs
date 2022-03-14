@@ -526,11 +526,11 @@ const arrTecnologys = [
         id: 16
     },
     {
-        name: 'Springboot',
+        name: 'SpringBoot',
         id: 17
     },
     {
-        name: 'ASP.NET MVC',
+        name: 'ASP.NETMVC',
         id: 18
     }
 ]

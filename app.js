@@ -12,7 +12,7 @@ const init = async () => {
 
     await page.waitForTimeout(1000)
 
-    await page.fill('input[id="username"]', 'rodriguezrodrigo17@hotmail.com')
+    await page.fill('input[id="username"]', 'rodriguezrodrigor12@gmail.com')
     await page.fill('input[id="password"]', 'Roxd**17')
     await page.click('button[aria-label="Iniciar sesión"]')
 
@@ -41,9 +41,8 @@ const init = async () => {
             
 
             const textResultsOfTecnology = mapText[1].split('resultados').join('')
-            //const tecnology = mapText[0].split('en')[0]
-            //const location = mapText[0].split('en')[1]
-            console.log(textResultsOfTecnology)
+            const tecnology = mapText[0].split('en')[0]
+            const location = mapText[0].split('en')[1]
 
             const objData = {
                 reuslt: textResultsOfTecnology,
