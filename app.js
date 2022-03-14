@@ -1,6 +1,7 @@
 const  { arrSearchReusults, arrCountries, arrTecnologys } = require('./data.js')
 const { chromium } = require('playwright')
 const { client } = require('./db.js')
+const { saveResult } = require('./query.js')
 
 const init = async () => {
 
@@ -40,9 +41,10 @@ const init = async () => {
             
 
             const textResultsOfTecnology = mapText[1].split('resultados').join('')
-            const tecnology = mapText[0].split('en')[0]
-            const location = mapText[0].split('en')[1]
-            
+            //const tecnology = mapText[0].split('en')[0]
+            //const location = mapText[0].split('en')[1]
+            console.log(textResultsOfTecnology)
+
             const objData = {
                 reuslt: textResultsOfTecnology,
                 tecnology,
@@ -53,13 +55,11 @@ const init = async () => {
         })
 
         const countrieResult = arrCountries.find(countrie => countrie.name.includes(resultTecnology.location))
-        const techResult = arrTecnologys.find(tech => tech.name === resultTecnology.tecnology )
-        console.log( resultTecnology.location, { countrieResult }, { techResult } )
-
+        //const techResult = arrTecnologys.find(tech => tech.name.includes(resultTecnology.tecnology) )
+        console.log( resultTecnology.location, { countrieResult }, resultTecnology.tecnology )
+        //saveResult(client, resultTecnology.reuslt, countrieResult.id, techResult.id)
 
     }
-
-    console.log(resultOfTecnologys)
 
 }
 

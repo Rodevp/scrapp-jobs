@@ -490,7 +490,7 @@ const arrTecnologys = [
         id: 7
     },
     {
-        name: 'React js',
+        name: 'Reactjs',
         id: 8
     },
     {
@@ -498,7 +498,7 @@ const arrTecnologys = [
         id: 9
     },
     {
-        name: 'Vue js',
+        name: 'Vuejs',
         id: 10
     },
     {
@@ -514,19 +514,19 @@ const arrTecnologys = [
         id: 13
     },
     {
-        name: 'Express  js',
+        name: 'Expressjs',
         id: 14
     },
     {
-        name: 'Node js',
+        name: 'Nodejs',
         id: 15
     },
     {
-        name: 'Ruby on rails',
+        name: 'Rubyonrails',
         id: 16
     },
     {
-        name: 'Spring boot',
+        name: 'Springboot',
         id: 17
     },
     {
