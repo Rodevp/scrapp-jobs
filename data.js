@@ -1,4 +1,4 @@
-const arrData = [
+const arrSearchReusults  = [
     {
         tecnology: 'python',
         countrie: 'Argentina'
@@ -433,4 +433,50 @@ const arrData = [
     },
 ]
 
-export default arrData
+const arrCountries = [
+    {
+        name: 'Colombia',
+        id: 1
+    },
+    {
+        name: 'Argentina',
+        id: 2
+    },
+    {
+        name: 'Peru',
+        id: 3
+    },
+    {
+        name: 'Mexico',
+        id: 4
+    },
+    {
+        name: 'Ecuador',
+        id: 5
+    },
+    {
+        name: 'Chile',
+        id: 6
+    },
+]
+
+const arrTecnologys = [
+    {
+        name: 'python',
+        id: 1
+    },
+    {
+        name: 'Javascript',
+        id: 2
+    },
+    {
+        name: 'Ruby',
+        id: 3
+    },
+]
+
+module.exports = {
+    arrSearchReusults,
+    arrCountries,
+    arrTecnologys
+} 

@@ -1,7 +1,8 @@
-import inputs_search from './data.js'
-import { chromium } from 'playwright'
+const  { arrSearchReusults } = require('./data.js')
+const { chromium } = require('playwright')
+const { client } = require('./db.js')
 
-(async () => {
+const init = async () => {
 
     const browser = await chromium.launch({ headless: false })
     const page = await browser.newPage()
@@ -23,10 +24,10 @@ import { chromium } from 'playwright'
 
     await page.waitForTimeout(2000)
 
-    for (let i = 0; i < inputs_search.length; i++) {
+    for (let i = 0; i < arrSearchReusults.length; i++) {
 
-        const tecnology = inputs_search[i].tecnology
-        const countrie = inputs_search[i].countrie
+        const tecnology = arrSearchReusults[i].tecnology
+        const countrie = arrSearchReusults[i].countrie
 
         await page.waitForTimeout(2000)
 
@@ -48,7 +49,7 @@ import { chromium } from 'playwright'
             const objData = {
                 reuslt: textResultsOfTecnology,
                 tecnology,
-                location: location === 'Arg' ? 'Argentina': location
+                location: location === 'Arg' ? 'Argentina': location,
             }
 
             return objData
@@ -60,4 +61,22 @@ import { chromium } from 'playwright'
 
     console.log(resultOfTecnologys)
 
-})();
+}
+
+//init()
+
+/**
+ * 
+ * {
+ *  result,
+ *  tecnology,
+ *  location
+ * }
+ * 
+ * 
+ * saveLocation(location)
+ * saveTecnology(tecnology)
+ * result(result, [i + 1], [i + 1])
+ * 
+ * 
+*/

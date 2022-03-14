@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "scrapp-jobs, web scrapper para recolectar informacion de tecnologias",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon app.js"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Rodevp/scrapp-jobs#readme",
   "dependencies": {
+    "pg": "^8.7.3",
     "playwright": "1.19.2"
   },
   "devDependencies": {
