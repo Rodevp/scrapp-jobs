@@ -6,7 +6,7 @@ const saveResult = (client, result, idLocation, idTecnology) => {
         if (err) {
             console.error(err, 'no pudo hacerse la query')
         }else {
-            console.log(res)
+            console.log('guardado')
         }
         client.end
     })

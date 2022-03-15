@@ -32,7 +32,7 @@ const init = async () => {
         await page.locator('//*/div[6]/header/div/div/div/div[2]/div[2]/div/div/input[1]').fill(countrie)
         await page.locator('//*/div[6]/header/div/div/div/div[2]/button[1]').click()
 
-        await page.waitForTimeout(1500)
+        await page.waitForTimeout(3000)
         
         const resultTecnology = await page.evaluate(() => {
 
@@ -40,12 +40,12 @@ const init = async () => {
                                  .map(e => e.textContent.replace(/ /g, '').split('\n').join(''))
             
 
-            const textResultsOfTecnology = mapText[1].split('resultados').join('')
+            const textResultsOfTecnology = mapText[1].split('resultados')
             const tecnology = mapText[0].split('en')[0]
             const location = mapText[0].split('en')[1]
 
             const objData = {
-                reuslt: textResultsOfTecnology,
+                reuslt: textResultsOfTecnology[0],
                 tecnology,
                 location: location === 'Arg' ? 'Argentina': location,
             }
@@ -54,9 +54,9 @@ const init = async () => {
         })
 
         const countrieResult = arrCountries.find(countrie => countrie.name.includes(resultTecnology.location))
-        //const techResult = arrTecnologys.find(tech => tech.name.includes(resultTecnology.tecnology) )
-        console.log( resultTecnology.location, { countrieResult }, resultTecnology.tecnology )
-        //saveResult(client, resultTecnology.reuslt, countrieResult.id, techResult.id)
+        const techResult = arrTecnologys.find(tech => tech.name.includes(resultTecnology.tecnology) )
+        console.log( resultTecnology.location, { countrieResult }, {techResult} )
+        saveResult(client, resultTecnology.reuslt, countrieResult.id, techResult.id)
 
     }
 

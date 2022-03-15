@@ -312,30 +312,6 @@ const arrSearchReusults  = [
         countrie: 'Mexico'
     },
     {
-        tecnology: 'Express js',
-        countrie: 'Argentina'
-    },
-    {
-        tecnology: 'Express js',
-        countrie: 'Colombia'
-    },
-    {
-        tecnology: 'Express js',
-        countrie: 'Chile'
-    },
-    {
-        tecnology: 'Express js',
-        countrie: 'Ecuador'
-    },
-    {
-        tecnology: 'Express js',
-        countrie: 'Peru'
-    },
-    {
-        tecnology: 'Express js',
-        countrie: 'Mexico'
-    },
-    {
         tecnology: 'Node js',
         countrie: 'Argentina'
     },
